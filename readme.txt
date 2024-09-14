@@ -2,7 +2,7 @@
 Tags: taxonomy image, category image, featured image, category logo, term image
 Contributors: sajjad67
 Author: Sajjad Hossain Sagor
-Tested up to: 6.0
+Tested up to: 6.6
 License: GPLv2
 Requires at least: 5.6
 Stable tag: trunk
@@ -36,11 +36,17 @@ echo $taxonomy_img; // taxonomy image url
 
 where $term_id is 'category / term id'
 
+Shortcode : use the shortcode anywhere to get taxonomy image. If you don't provide "term_id" value then it will be current queried page taxonomy automatically.
+<pre>
+echo do_shortcode( '[ad_tax_image term_id="" return_img_tag="true" class="test-class"]' ); // keep term_id empty if you want to show current visited taxonomy archive image.
+</pre>
+
 = Features =
 * Option To Enable Custom Image Upload for different taxonomies 
 * Option To Enable Custom Image Upload for different devices 
 * Very simple to use & WP Default Media Uploaded to upload image
 * Built-in Template Tag to use in your theme template
+* Shortcode to use anywhere.
 
 Interested in contributing to Drag & Drop Menu Items?
 Contact me at sagorh672(at)gmail(dot)com
@@ -66,6 +72,12 @@ If successful, click Activate Plugin to activate it, or Return to Plugin Install
 6. After Enabling Go To Your Taxonomy Add/Edit Page To Upload Image
 
 == Changelog ==
+= 1.0.9 =
+* Minor Update.. tested for latest wp compatibility..
+= 1.0.8 =
+* Added a new shortcode for dynamic usage in any template or dnd builder. Plus tested for latest wp compatibility..
+= 1.0.7 =
+* Minor Update.. tested for latest wp compatibility..
 = 1.0.6 =
 * Minor Update.. tested for latest wp compatibility.. added any device option and code style changed and beautified.
 = 1.0.5 =

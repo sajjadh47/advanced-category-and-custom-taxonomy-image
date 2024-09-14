@@ -4,10 +4,10 @@ jQuery( document ).ready( function( $ )
     {
         event.preventDefault();
         
-        var self = $( this );
+        var self        = $( this );
 
         // Create the media frame.
-        var file_frame = wp.media.frames.file_frame = wp.media(
+        var file_frame  = wp.media.frames.file_frame = wp.media(
         {
             title: 'Upload Taxonomy Image',
             button:
@@ -15,16 +15,16 @@ jQuery( document ).ready( function( $ )
                 text: 'Upload',
             },
             multiple: false
-        });
+        } );
 
         file_frame.on( 'select', function ()
         {
-            attachment = file_frame.state().get( 'selection' ).first().toJSON();
+            attachment  = file_frame.state().get( 'selection' ).first().toJSON();
             
-            self.prev('.wpsa-url').val( attachment.url ).change();
-        });
+            self.prev( '.wpsa-url' ).val( attachment.url ).change();
+        } );
 
         // Finally, open the modal
         file_frame.open();
-    });
-});
+    } );
+} );
