@@ -8,11 +8,10 @@ Requires at least: 5.6
 Stable tag: trunk
 
 Add Custom Image To Your Category / Custom Taxonomy Field With Advanced Category and Custom Taxonomy Image Plugin.
-Upload Different Image For Different Devices ex: Mobile, Tablet, Desktop, iOS, Android, Windows Phone.
-Built-in Template Tag To Use Anywhere You Want In Your Theme : get_taxonomy_image($term_id, $return_img_tag, $class);
 
 == Description ==
-Now its easier to include category / custom taxonomy image with this plugin for different platforms. No need to overload mobile bandwidth with high pixel image size. You can now select different image for different devices.
+Now its easier to include category / custom taxonomy image with this plugin for different platforms. No need to overload mobile bandwidth with high pixel image size. You can now select different image for different devices. Upload Different Image For Different Devices ex: Mobile, Tablet, Desktop, iOS, Android, Windows Phone.
+Built-in Template Tag To Use Anywhere You Want In Your Theme : get_taxonomy_image($term_id, $return_img_tag, $class);
 
 = Documentation =
 
