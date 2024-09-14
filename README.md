@@ -3,7 +3,7 @@
 **Tags:** taxonomy image, category image, featured image, category logo, term image \
 **Contributors:** sajjad67
 Author: Sajjad Hossain Sagor
-**Tested up to:** 6.0 \
+**Tested up to:** 6.6 \
 **License:** GPLv2 \
 **Requires at least:** 5.6 \
 **Stable tag:** trunk
@@ -81,6 +81,15 @@ If successful, click Activate Plugin to activate it, or Return to Plugin Install
 6. After Enabling Go To Your Taxonomy Add/Edit Page To Upload Image
 
 ## Changelog
+### 1.0.9 =
+
+* Minor Update.. tested for latest wp compatibility..
+### 1.0.8 =
+
+* Added a new shortcode for dynamic usage in any template or dnd builder. Plus tested for latest wp compatibility..
+### 1.0.7 =
+
+* Minor Update.. tested for latest wp compatibility..
 
 ### 1.0.6
 
