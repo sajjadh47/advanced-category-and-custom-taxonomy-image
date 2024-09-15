@@ -594,5 +594,5 @@ add_shortcode( 'ad_tax_image', function( $atts )
 		'return_img_tag' 	=> false,
 	), $atts );
 
-	return get_taxonomy_image( $attr['term_id'], filter_var( $atts['return_img_tag'], FILTER_VALIDATE_BOOLEAN ), explode( ' ', $atts['class'] ) );
+	return get_taxonomy_image( $atts['term_id'], filter_var( $atts['return_img_tag'], FILTER_VALIDATE_BOOLEAN ), explode( ' ', $atts['class'] ) );
 } );
