@@ -4,7 +4,7 @@
 **Contributors:** sajjad67 \
 **Requires at least:** 5.6 \
 **Tested up to:** 6.7 \
-**Stable tag:** 2.0.0 \
+**Stable tag:** 2.0.2 \
 **Requires PHP:** 8.0
 **License:** GPLv2 \
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html
@@ -82,7 +82,7 @@ If successful, click Activate Plugin to activate it, or Return to Plugin Install
 6. After Enabling Go To Your Taxonomy Add/Edit Page To Upload Image
 
 ## Changelog
-### 2.0.0
+### 2.0.2
 
 * Geo Location Db updated to the last version. Compatibility check for wp v6.7!
 
