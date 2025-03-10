@@ -1,12 +1,13 @@
 # Advanced Category and Custom Taxonomy Image
 
 **Tags:** taxonomy image, category image, featured image, category logo, term image \
-**Contributors:** sajjad67
-Author: Sajjad Hossain Sagor
-**Tested up to:** 6.6 \
-**License:** GPLv2 \
+**Contributors:** sajjad67 \
 **Requires at least:** 5.6 \
-**Stable tag:** trunk
+**Tested up to:** 6.7 \
+**Stable tag:** 2.0.0 \
+**Requires PHP:** 8.0
+**License:** GPLv2 \
+**License URI:** http://www.gnu.org/licenses/gpl-2.0.html
 
 Add Custom Image To Your Category / Custom Taxonomy Field With Advanced Category and Custom Taxonomy Image Plugin.
 Upload Different Image For Different Devices ex: Mobile, Tablet, Desktop, iOS, Android, Windows Phone.
@@ -84,6 +85,9 @@ If successful, click Activate Plugin to activate it, or Return to Plugin Install
 ### 1.0.9
 
 * Minor Update.. tested for latest wp compatibility..
+### 2.0.0
+* Geo Location Db updated to the last version. Compatibility check for wp v6.7!
+
 ### 1.0.8
 
 * Added a new shortcode for dynamic usage in any template or dnd builder. Plus tested for latest wp compatibility..

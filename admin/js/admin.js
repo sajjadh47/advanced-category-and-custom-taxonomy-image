@@ -1,6 +1,6 @@
 jQuery( document ).ready( function( $ )
 {
-    $( '.wpsa-browse' ).on( 'click', function ( event )
+    $( '.advanced-category-and-custom-taxonomy-image-upload-btn' ).on( 'click', function ( event )
     {
         event.preventDefault();
         
@@ -9,10 +9,10 @@ jQuery( document ).ready( function( $ )
         // Create the media frame.
         var file_frame  = wp.media.frames.file_frame = wp.media(
         {
-            title: 'Upload Taxonomy Image',
+            title: ADVANCED_CATEGORY_AND_CUSTOM_TAXONOMY_IMAGE.upload_tax_img_txt,
             button:
             {
-                text: 'Upload',
+                text: ADVANCED_CATEGORY_AND_CUSTOM_TAXONOMY_IMAGE.upload_txt,
             },
             multiple: false
         } );
@@ -21,7 +21,7 @@ jQuery( document ).ready( function( $ )
         {
             attachment  = file_frame.state().get( 'selection' ).first().toJSON();
             
-            self.prev( '.wpsa-url' ).val( attachment.url ).change();
+            self.prev( '.advanced-category-and-custom-taxonomy-image-url' ).val( attachment.url ).change();
         } );
 
         // Finally, open the modal

@@ -2,16 +2,18 @@
 Tags: taxonomy image, category image, featured image, category logo, term image
 Contributors: sajjad67
 Author: Sajjad Hossain Sagor
-Tested up to: 6.6
-License: GPLv2
+Tested up to: 6.7
 Requires at least: 5.6
-Stable tag: trunk
+Stable tag: 2.0.2
+Requires PHP: 8.0
+License: GPLv2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 Add Custom Image To Your Category / Custom Taxonomy Field With Advanced Category and Custom Taxonomy Image Plugin.
 
 == Description ==
 Now its easier to include category / custom taxonomy image with this plugin for different platforms. No need to overload mobile bandwidth with high pixel image size. You can now select different image for different devices. Upload Different Image For Different Devices ex: Mobile, Tablet, Desktop, iOS, Android, Windows Phone.
-Built-in Template Tag To Use Anywhere You Want In Your Theme : get_taxonomy_image($term_id, $return_img_tag, $class);
+Built-in Template Tag To Use Anywhere You Want In Your Theme : get_taxonomy_image( $term_id, $return_img_tag, $class );
 
 = Documentation =
 
@@ -28,7 +30,7 @@ $return_img_tag
 (boolean) (Optional) Formatted Image with <img> tag for the field during output.
 
 $class
-(array) (Optional) Array of image classes ex: array('class1','class2',...) but $return_img_tag should be true to add image class.
+(array) (Optional) Array of image classes ex: array( 'class1', 'class2', ... ) but $return_img_tag should be true to add image class.
 
 echo $taxonomy_img; // taxonomy image url
 </pre>
@@ -37,7 +39,7 @@ where $term_id is 'category / term id'
 
 Shortcode : use the shortcode anywhere to get taxonomy image. If you don't provide "term_id" value then it will be current queried page taxonomy automatically.
 <pre>
-echo do_shortcode( '[ad_tax_image term_id="" return_img_tag="true" class="test-class"]' ); // keep term_id empty if you want to show current visited taxonomy archive image.
+echo do_shortcode( '[ad_tax_image term_id="" return_img_tag="true" class="your custom class list seperated by space"]' ); // keep term_id empty if you want to show current visited taxonomy archive image.
 </pre>
 
 = Features =
@@ -47,7 +49,7 @@ echo do_shortcode( '[ad_tax_image term_id="" return_img_tag="true" class="test-c
 * Built-in Template Tag to use in your theme template
 * Shortcode to use anywhere.
 
-Interested in contributing to Drag & Drop Menu Items?
+Interested in contributing to Advanced Category and Custom Taxonomy Image?
 Contact me at sagorh672(at)gmail(dot)com
 
 == Screenshots ==
@@ -61,7 +63,7 @@ Contact me at sagorh672(at)gmail(dot)com
 Get Your Taxonomy tag_ID and use get_taxonomy_image( $term_id ) to get the image url and use it in your theme's template area where you want to show it. (Note : In the taxonomy list there you will find already created template tag to use see screenshot 3)
 
 == Installation ==
-1. Go to Wordpress plugin page
+1. Go to WordPress plugin page
 2. Click Add New & Upload Plugin
 3. Drag / Click upload the plugin zip file
 4. The resulting installation screen will list the installation as successful or note any problems during the install.
@@ -71,6 +73,16 @@ If successful, click Activate Plugin to activate it, or Return to Plugin Install
 6. After Enabling Go To Your Taxonomy Add/Edit Page To Upload Image
 
 == Changelog ==
+= 2.0.2 =
+* If for specific device image is not set yet, it will opt for default any device image now
+= 2.0.1 =
+* Fixed bug function get_taxonomy_image() was not found
+= 2.0.0 =
+* Major changes in codebase. Compatibility checkup for latest wp version 6.7
+= 1.1.0 =
+* Previous version had a bug where Image were not showing even after upload, it has been fixed. Everyone is recommended to update to the latest version. Any device filter is removed from Advanced tab and added as a global device.
+= 1.1.0 =
+* Major Update.. Please do take backup and update the plugin. Applied wp standard security sanitizations and escaping output to avoid any vulnerability. After update please go check your settings thoroughly and check if it works properly.
 = 1.0.9 =
 * Minor Update.. tested for latest wp compatibility..
 = 1.0.8 =
@@ -82,7 +94,7 @@ If successful, click Activate Plugin to activate it, or Return to Plugin Install
 = 1.0.5 =
 * Minor Update.. now tax template tag won't be visible if no image is added
 = 1.0.4 =
-* Minor Update.. updated for tranlations ready..
+* Minor Update.. updated for translations ready..
 = 1.0.3 =
 * Minor Update.. tested for latest wp compatibility..
 = 1.0.2 =
