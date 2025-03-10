@@ -82,11 +82,13 @@ If successful, click Activate Plugin to activate it, or Return to Plugin Install
 6. After Enabling Go To Your Taxonomy Add/Edit Page To Upload Image
 
 ## Changelog
+### 2.0.0
+
+* Geo Location Db updated to the last version. Compatibility check for wp v6.7!
+
 ### 1.0.9
 
 * Minor Update.. tested for latest wp compatibility..
-### 2.0.0
-* Geo Location Db updated to the last version. Compatibility check for wp v6.7!
 
 ### 1.0.8
 
