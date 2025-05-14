@@ -1,26 +1,20 @@
 # Advanced Category and Custom Taxonomy Image
 
 **Tags:** taxonomy image, category image, featured image, category logo, term image \
-**Contributors:** sajjad67 \
-**Requires at least:** 5.6 \
-**Tested up to:** 6.7 \
-**Stable tag:** 2.0.2 \
-**Requires PHP:** 8.0 \
-**License:** GPLv2 \
-**License URI:** http://www.gnu.org/licenses/gpl-2.0.html
+**Tested up to:** 6.8 \
+**Requires PHP:** 8.0
 
 Add Custom Image To Your Category / Custom Taxonomy Field With Advanced Category and Custom Taxonomy Image Plugin.
-Upload Different Image For Different Devices ex: Mobile, Tablet, Desktop, iOS, Android, Windows Phone.
-Built-in Template Tag To Use Anywhere You Want In Your Theme : get_taxonomy_image($term_id, $return_img_tag, $class);
 
 ## Description
 
-Now its easier to include category / custom taxonomy image with this plugin for different platforms. No need to overload mobile bandwidth with high pixel image size. You can now select different image for different devices.
+Now its easier to include category / custom taxonomy image with this plugin for different platforms. No need to overload mobile bandwidth with high pixel image size. You can now select different image for different devices. Upload Different Image For Different Devices ex: Mobile, Tablet, Desktop, iOS, Android, Windows Phone.
+Built-in Template Tag To Use Anywhere You Want In Your Theme : get_taxonomy_image( $term_id, $return_img_tag, $class );
 
 ### Documentation
 
 <pre>
-$taxonomy_img = get_taxonomy_image( int $term_id = get_queried_object()->term_id , boolean $return_img_tag = false , array $class = array() );
+$taxonomy_img = get_taxonomy_image( int $term_id = get_queried_object()->term_id , boolean $return_img_tag = false , string $class = '' );
 
 get taxonomy image url if $return_html = true then return <img> tag
 
@@ -32,12 +26,17 @@ $return_img_tag
 (boolean) (Optional) Formatted Image with <img> tag for the field during output.
 
 $class
-(array) (Optional) Array of image classes ex: array('class1','class2',...) but $return_img_tag should be true to add image class.
+(string) (Optional) A space separated string of CSS classes to add to the <img> tag. classes ex: "your custom class list separated by space" but $return_img_tag should be true to add image class.
 
 echo $taxonomy_img; // taxonomy image url
 </pre>
 
 where $term_id is 'category / term id'
+
+Shortcode : use the shortcode anywhere to get taxonomy image. If you don't provide "term_id" value then it will be current queried page taxonomy automatically.
+<pre>
+echo do_shortcode( '[ad_tax_image term_id="" return_img_tag="true" class="your custom class list seperated by space"]' ); // keep term_id empty if you want to show current visited taxonomy archive image.
+</pre>
 
 ### Features
 
@@ -45,9 +44,6 @@ where $term_id is 'category / term id'
 * Option To Enable Custom Image Upload for different devices 
 * Very simple to use & WP Default Media Uploaded to upload image
 * Built-in Template Tag to use in your theme template
-
-Interested in contributing to Drag & Drop Menu Items?
-Contact me at sagorh672(at)gmail(dot)com
 
 ## Screenshots
 
@@ -63,6 +59,9 @@ Contact me at sagorh672(at)gmail(dot)com
 
 ![Auto Template Tag Generation](https://ps.w.org/advanced-category-and-custom-taxonomy-image/assets/screenshot-3.png)
 
+### 3. Taxonomy Edit Page
+
+![Taxonomy Edit Page](https://ps.w.org/advanced-category-and-custom-taxonomy-image/assets/screenshot-4.png)
 
 
 ## Frequently Asked Questions
@@ -83,8 +82,11 @@ If successful, click Activate Plugin to activate it, or Return to Plugin Install
 
 ## Changelog
 
+### 2.0.4
+* Minor changes in the code styling
+
 ### 2.0.2
-* Geo Location Db updated to the last version. Compatibility check for wp v6.7!
+* Compatibility check for wp v6.7!
 
 ### 1.0.9
 * Minor Update.. tested for latest wp compatibility..
