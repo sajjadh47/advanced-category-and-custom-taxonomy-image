@@ -59,7 +59,7 @@ class Advanced_Category_And_Custom_Taxonomy_Image {
 	 * @access    public
 	 */
 	public function __construct() {
-		$this->version     = defined( 'ADVANCED_CATEGORY_AND_CUSTOM_TAXONOMY_IMAGE_VERSION' ) ? ADVANCED_CATEGORY_AND_CUSTOM_TAXONOMY_IMAGE_VERSION : '1.0.0';
+		$this->version     = defined( 'ADVANCED_CATEGORY_AND_CUSTOM_TAXONOMY_IMAGE_PLUGIN_VERSION' ) ? ADVANCED_CATEGORY_AND_CUSTOM_TAXONOMY_IMAGE_PLUGIN_VERSION : '1.0.0';
 		$this->plugin_name = 'advanced-category-and-custom-taxonomy-image';
 
 		$this->load_dependencies();
