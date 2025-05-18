@@ -412,7 +412,7 @@ class Advanced_Category_And_Custom_Taxonomy_Image_Admin {
 				$html .= '</div>';
 			}
 
-			echo wp_kses( $html, $this->settings_api->allowed_html_tags );
+			echo wp_kses( $html, $this->settings_api::$allowed_html_tags );
 		} else {
 			$html  = '<div class="form-field"><label for="tax_image_url_any">' . __( 'Taxonomy Image For Any Device', 'advanced-category-and-custom-taxonomy-image' ) . '</label>';
 			$html .= '<input type="text" class="tax_image_upload advanced-category-and-custom-taxonomy-image-url" id="tax_image_url_any" name="tax_image_url[tax_image_url_any]" value=""/>';
@@ -420,7 +420,7 @@ class Advanced_Category_And_Custom_Taxonomy_Image_Admin {
 			$html .= '<p class="description">' . __( 'Choose Image To Show For Any Device', 'advanced-category-and-custom-taxonomy-image' ) . '</p>';
 			$html .= '</div>';
 
-			echo wp_kses( $html, $this->settings_api->allowed_html_tags );
+			echo wp_kses( $html, $this->settings_api::$allowed_html_tags );
 		}
 
 		wp_nonce_field( 'ad_tax_image_nonce', 'ad_tax_image_nonce', false );
@@ -478,7 +478,7 @@ class Advanced_Category_And_Custom_Taxonomy_Image_Admin {
 				$html .= '<p class="description">' . __( 'Choose Image To Show For ', 'advanced-category-and-custom-taxonomy-image' ) . esc_attr( self::$devices[ $enabled_device ] ) . '</p>';
 			}
 
-			echo wp_kses( $html, $this->settings_api->allowed_html_tags );
+			echo wp_kses( $html, $this->settings_api::$allowed_html_tags );
 		} else {
 			// previous version db name was universal, so for compatibility we are checking if universal exists anymore.
 			$any_image_url = Advanced_Category_And_Custom_Taxonomy_Image::get_any_device_image( $taxonomy->term_id );
@@ -490,7 +490,7 @@ class Advanced_Category_And_Custom_Taxonomy_Image_Admin {
 			$html .= '<input type="button" class="button advanced-category-and-custom-taxonomy-image-upload-btn" value="' . esc_attr( $label ) . '" />';
 			$html .= '<p class="description">' . __( 'Choose Image To Show For Any Device', 'advanced-category-and-custom-taxonomy-image' ) . '</p></td></tr>';
 
-			echo wp_kses( $html, $this->settings_api->allowed_html_tags );
+			echo wp_kses( $html, $this->settings_api::$allowed_html_tags );
 		}
 
 		wp_nonce_field( 'ad_tax_image_nonce', 'ad_tax_image_nonce', false );
