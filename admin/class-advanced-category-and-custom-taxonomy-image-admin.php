@@ -47,6 +47,7 @@ class Advanced_Category_And_Custom_Taxonomy_Image_Admin {
 	 * The list of availalbe devices to detect.
 	 *
 	 * @since     2.0.0
+	 * @static
 	 * @access    public
 	 * @var       array $devices Holds device types list.
 	 */

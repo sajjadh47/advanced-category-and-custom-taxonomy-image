@@ -238,8 +238,8 @@ class Advanced_Category_And_Custom_Taxonomy_Image {
 	 * Returns default image which will be used for any devices
 	 *
 	 * @since     2.0.0
-	 * @access    public
 	 * @static
+	 * @access    public
 	 * @param     int|string $term_id          Term id to get the image.
 	 * @return    string     $device_image_url Taxonomy image url.
 	 */
@@ -262,8 +262,8 @@ class Advanced_Category_And_Custom_Taxonomy_Image {
 	 * Checks if taxonomy image is available for any device.
 	 *
 	 * @since     2.0.0
-	 * @access    public
 	 * @static
+	 * @access    public
 	 * @param     int|string $term_id Term id to get the image.
 	 * @return    bool                Whether tax has image saved.
 	 */
@@ -341,8 +341,8 @@ class Advanced_Category_And_Custom_Taxonomy_Image {
 	 * value for the specified field.
 	 *
 	 * @since     2.0.0
-	 * @access    public
 	 * @static
+	 * @access    public
 	 * @param     string $option        The name of the settings field.
 	 * @param     string $section       The name of the section this field belongs to. This corresponds
 	 *                                  to the option name used in `register_setting()`.
