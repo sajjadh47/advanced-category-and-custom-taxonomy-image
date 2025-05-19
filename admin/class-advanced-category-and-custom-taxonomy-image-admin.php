@@ -1,6 +1,6 @@
 <?php
 /**
- * This file contains the definition of the WP_Edit_Username_Admin class, which
+ * This file contains the definition of the Advanced_Category_And_Custom_Taxonomy_Image_Admin class, which
  * is used to load the plugin's admin-specific functionality.
  *
  * @package       Advanced_Category_And_Custom_Taxonomy_Image
@@ -46,9 +46,9 @@ class Advanced_Category_And_Custom_Taxonomy_Image_Admin {
 	/**
 	 * The list of availalbe devices to detect.
 	 *
-	 * @since    2.0.0
-	 * @access   public
-	 * @var      array $devices Holds device types list.
+	 * @since     2.0.0
+	 * @access    public
+	 * @var       array $devices Holds device types list.
 	 */
 	private static $devices = array();
 
@@ -222,8 +222,8 @@ class Advanced_Category_And_Custom_Taxonomy_Image_Admin {
 		 * This filter is applied to the array of devices used for targeting images,
 		 * allowing for modification of the device list.
 		 *
-		 * @since     2.0.0
-		 * @param     array $devices An array of devices.
+		 * @since    2.0.0
+		 * @param    array $devices An array of devices.
 		 */
 		self::$devices = apply_filters( 'ad_tax_image_devices', array() );
 
@@ -385,12 +385,11 @@ class Advanced_Category_And_Custom_Taxonomy_Image_Admin {
 		 * This filter is applied to the array of devices used for targeting images,
 		 * allowing for modification of the device list.
 		 *
-		 * @since     2.0.0
-		 * @param     array $devices An array of devices.
+		 * @since    2.0.0
+		 * @param    array $devices An array of devices.
 		 */
 		self::$devices = apply_filters( 'ad_tax_image_devices', array() );
-
-		$label = __( 'Choose File', 'advanced-category-and-custom-taxonomy-image' );
+		$label         = __( 'Choose File', 'advanced-category-and-custom-taxonomy-image' );
 
 		// get all image field enabled devices.
 		$enabled_devices = Advanced_Category_And_Custom_Taxonomy_Image::get_option( 'enabled_devices', 'ad_cat_tax_img_advanced_settings' );
@@ -444,12 +443,11 @@ class Advanced_Category_And_Custom_Taxonomy_Image_Admin {
 		 * This filter is applied to the array of devices used for targeting images,
 		 * allowing for modification of the device list.
 		 *
-		 * @since     2.0.0
-		 * @param     array $devices An array of devices.
+		 * @since    2.0.0
+		 * @param    array $devices An array of devices.
 		 */
 		self::$devices = apply_filters( 'ad_tax_image_devices', array() );
-
-		$label = __( 'Choose File', 'advanced-category-and-custom-taxonomy-image' );
+		$label         = __( 'Choose File', 'advanced-category-and-custom-taxonomy-image' );
 
 		// get all image field enabled devices.
 		$enabled_devices = Advanced_Category_And_Custom_Taxonomy_Image::get_option( 'enabled_devices', 'ad_cat_tax_img_advanced_settings' );

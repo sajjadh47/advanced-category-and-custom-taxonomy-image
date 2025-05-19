@@ -73,12 +73,12 @@ class Advanced_Category_And_Custom_Taxonomy_Image {
 	 *
 	 * Include the following files that make up the plugin:
 	 *
-	 * - Advanced_Category_And_Custom_Taxonomy_Image_Loader.  Orchestrates the hooks of the plugin.
-	 * - Advanced_Category_And_Custom_Taxonomy_Image_i18n.    Defines internationalization functionality.
-	 * - Sajjad_Dev_Settings_API.                             Provides an interface for interacting with the WordPress Options API.
-	 * - MobileDetect.                                        The Mobile Detect PHP library.
-	 * - Advanced_Category_And_Custom_Taxonomy_Image_Admin.   Defines all hooks for the admin area.
-	 * - Advanced_Category_And_Custom_Taxonomy_Image_Public.  Defines all hooks for the public side of the site.
+	 * - Advanced_Category_And_Custom_Taxonomy_Image_Loader. Orchestrates the hooks of the plugin.
+	 * - Advanced_Category_And_Custom_Taxonomy_Image_i18n.   Defines internationalization functionality.
+	 * - Sajjad_Dev_Settings_API.                            Provides an interface for interacting with the WordPress Options API.
+	 * - MobileDetect.                                       The Mobile Detect PHP library.
+	 * - Advanced_Category_And_Custom_Taxonomy_Image_Admin.  Defines all hooks for the admin area.
+	 * - Advanced_Category_And_Custom_Taxonomy_Image_Public. Defines all hooks for the public side of the site.
 	 *
 	 * Create an instance of the loader which will be used to register the hooks
 	 * with WordPress.
@@ -239,6 +239,7 @@ class Advanced_Category_And_Custom_Taxonomy_Image {
 	 *
 	 * @since     2.0.0
 	 * @access    public
+	 * @static
 	 * @param     int|string $term_id          Term id to get the image.
 	 * @return    string     $device_image_url Taxonomy image url.
 	 */
@@ -262,6 +263,7 @@ class Advanced_Category_And_Custom_Taxonomy_Image {
 	 *
 	 * @since     2.0.0
 	 * @access    public
+	 * @static
 	 * @param     int|string $term_id Term id to get the image.
 	 * @return    bool                Whether tax has image saved.
 	 */
@@ -340,6 +342,7 @@ class Advanced_Category_And_Custom_Taxonomy_Image {
 	 *
 	 * @since     2.0.0
 	 * @access    public
+	 * @static
 	 * @param     string $option        The name of the settings field.
 	 * @param     string $section       The name of the section this field belongs to. This corresponds
 	 *                                  to the option name used in `register_setting()`.
