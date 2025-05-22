@@ -75,7 +75,7 @@ class Advanced_Category_And_Custom_Taxonomy_Image {
 	 *
 	 * - Advanced_Category_And_Custom_Taxonomy_Image_Loader. Orchestrates the hooks of the plugin.
 	 * - Advanced_Category_And_Custom_Taxonomy_Image_i18n.   Defines internationalization functionality.
-	 * - Sajjad_Dev_Settings_API.                            Provides an interface for interacting with the WordPress Options API.
+	 * - Sajjad_Dev_Settings_API.                            Provides an interface for interacting with the WordPress Settings API.
 	 * - MobileDetect.                                       The Mobile Detect PHP library.
 	 * - Advanced_Category_And_Custom_Taxonomy_Image_Admin.  Defines all hooks for the admin area.
 	 * - Advanced_Category_And_Custom_Taxonomy_Image_Public. Defines all hooks for the public side of the site.
@@ -100,7 +100,7 @@ class Advanced_Category_And_Custom_Taxonomy_Image {
 		require_once ADVANCED_CATEGORY_AND_CUSTOM_TAXONOMY_IMAGE_PLUGIN_PATH . 'includes/class-advanced-category-and-custom-taxonomy-image-i18n.php';
 
 		/**
-		 * The class responsible for defining an interface for interacting with the WordPress Options API.
+		 * The class responsible for defining an interface for interacting with the WordPress Settings API.
 		 */
 		require_once ADVANCED_CATEGORY_AND_CUSTOM_TAXONOMY_IMAGE_PLUGIN_PATH . 'includes/class-sajjad-dev-settings-api.php';
 
