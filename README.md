@@ -1,5 +1,7 @@
 # Advanced Category and Custom Taxonomy Image
 
+[![Plugin Banner](https://ps.w.org/advanced-category-and-custom-taxonomy-image/assets/banner-772x250.png)](https://wordpress.org/plugins/advanced-category-and-custom-taxonomy-image/)
+
 **Tags:** taxonomy image, category image, featured image, category logo, term image \
 **Tested up to:** 6.8 \
 **Requires PHP:** 8.0
