@@ -84,6 +84,9 @@ If successful, click Activate Plugin to activate it, or Return to Plugin Install
 
 ## Changelog
 
+### 2.0.6
+* Fixed issue: typo giving fatal error
+
 ### 2.0.5
 * Fixed issue: when there are no device enabled it gives fatal error
 
