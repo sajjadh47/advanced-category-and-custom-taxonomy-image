@@ -22,6 +22,8 @@ jQuery( document ).ready( function( $ )
 			attachment = file_frame.state().get( 'selection' ).first().toJSON();
 			
 			self.prev( '.advanced-category-and-custom-taxonomy-image-url' ).val( attachment.url ).change();
+
+			self.prev( '.advanced-category-and-custom-taxonomy-image-url' ).closest( 'td, div' ).find( 'img.image_url_img_preview' ).attr( 'src', attachment.url );
 		} );
 
 		// Finally, open the modal

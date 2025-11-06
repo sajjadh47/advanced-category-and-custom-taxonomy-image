@@ -84,6 +84,9 @@ If successful, click Activate Plugin to activate it, or Return to Plugin Install
 
 ## Changelog
 
+### 2.0.7
+* Fixed issue: Tax image was not updating for any device type.
+
 ### 2.0.6
 * Fixed issue: typo giving fatal error
 

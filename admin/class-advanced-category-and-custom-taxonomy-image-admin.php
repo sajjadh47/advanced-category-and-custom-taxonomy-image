@@ -327,6 +327,15 @@ class Advanced_Category_And_Custom_Taxonomy_Image_Admin {
 
 			foreach ( $images as $name => $value ) {
 				update_term_meta( $term_id, $name, sanitize_url( $value ) );
+
+				/**
+				 * Legacy term meta value cleanup.
+				 *
+				 * @since     2.0.7
+				 */
+				if ( 'tax_image_url_any' === $name ) {
+					update_term_meta( $term_id, 'tax_image_url_universal', '' );
+				}
 			}
 		}
 	}
@@ -400,6 +409,7 @@ class Advanced_Category_And_Custom_Taxonomy_Image_Admin {
 		// check if any device enabled.
 		if ( ! empty( $enabled_devices ) ) {
 			$html  = '<div class="form-field"><label for="tax_image_url_any">' . __( 'Taxonomy Image For Any Device', 'advanced-category-and-custom-taxonomy-image' ) . '</label>';
+			$html .= '<img class="image_url_img_preview" src="" width="150"/>';
 			$html .= '<input type="text" class="tax_image_upload advanced-category-and-custom-taxonomy-image-url" id="tax_image_url_any" name="tax_image_url[tax_image_url_any]" value=""/>';
 			$html .= '<input type="button" class="button advanced-category-and-custom-taxonomy-image-upload-btn" value="' . esc_attr( $label ) . '" />';
 			$html .= '<p class="description">' . __( 'Choose Image To Show For Any Device', 'advanced-category-and-custom-taxonomy-image' ) . '</p>';
@@ -408,6 +418,7 @@ class Advanced_Category_And_Custom_Taxonomy_Image_Admin {
 			// registed custom image field for each enabled devices.
 			foreach ( $enabled_devices as $enabled_device ) {
 				$html .= '<div class="form-field"> <label for="tax_image_url_' . esc_attr( $enabled_device ) . '">' . __( 'Taxonomy Image For ', 'advanced-category-and-custom-taxonomy-image' ) . esc_attr( self::$devices[ $enabled_device ] ) . '</label>';
+				$html .= '<img class="image_url_img_preview" src="" width="150"/>';
 				$html .= '<input type="text" class="tax_image_upload advanced-category-and-custom-taxonomy-image-url" id="tax_image_url_' . esc_attr( $enabled_device ) . '" name="tax_image_url[tax_image_url_' . esc_attr( $enabled_device ) . ']" value="" />';
 				$html .= '<input type="button" class="button advanced-category-and-custom-taxonomy-image-upload-btn" value="' . esc_attr( $label ) . '" />';
 				$html .= '<p class="description">' . __( 'Choose Image To Show For ', 'advanced-category-and-custom-taxonomy-image' ) . esc_attr( self::$devices[ $enabled_device ] ) . '</p>';
@@ -417,6 +428,7 @@ class Advanced_Category_And_Custom_Taxonomy_Image_Admin {
 			echo wp_kses( $html, $this->settings_api::$allowed_html_tags );
 		} else {
 			$html  = '<div class="form-field"><label for="tax_image_url_any">' . __( 'Taxonomy Image For Any Device', 'advanced-category-and-custom-taxonomy-image' ) . '</label>';
+			$html .= '<img class="image_url_img_preview" src="" width="150"/>';
 			$html .= '<input type="text" class="tax_image_upload advanced-category-and-custom-taxonomy-image-url" id="tax_image_url_any" name="tax_image_url[tax_image_url_any]" value=""/>';
 			$html .= '<input type="button" class="button advanced-category-and-custom-taxonomy-image-upload-btn" value="' . esc_attr( $label ) . '" />';
 			$html .= '<p class="description">' . __( 'Choose Image To Show For Any Device', 'advanced-category-and-custom-taxonomy-image' ) . '</p>';
@@ -462,7 +474,7 @@ class Advanced_Category_And_Custom_Taxonomy_Image_Admin {
 
 			$html  = '<tr class="form-field">';
 			$html .= '<th scope="row" valign="top"><label for="tax_image_url_any">' . __( 'Taxonomy Image For Any Device', 'advanced-category-and-custom-taxonomy-image' ) . '</label></th><td>';
-			$html .= empty( $any_image_url ) ? '' : '<img src="' . esc_url( $any_image_url ) . '" width="150"/><br><br>';
+			$html .= '<img class="image_url_img_preview" src="' . esc_url( $any_image_url ) . '" width="150"/>';
 			$html .= '<input type="text" class="tax_image_upload advanced-category-and-custom-taxonomy-image-url" id="tax_image_url_any" name="tax_image_url[tax_image_url_any]" value="' . esc_url( $any_image_url ) . '"/>';
 			$html .= '<input type="button" class="button advanced-category-and-custom-taxonomy-image-upload-btn" value="' . esc_attr( $label ) . '" />';
 			$html .= '<p class="description">' . __( 'Choose Image To Show For Any Device', 'advanced-category-and-custom-taxonomy-image' ) . '</p></td></tr>';
@@ -473,7 +485,7 @@ class Advanced_Category_And_Custom_Taxonomy_Image_Admin {
 
 				$html .= '<tr class="form-field">';
 				$html .= '<th scope="row" valign="top"><label for="tax_image_url_' . esc_attr( $enabled_device ) . '">' . __( 'Taxonomy Image For ', 'advanced-category-and-custom-taxonomy-image' ) . esc_attr( self::$devices[ $enabled_device ] ) . '</label></th><td>';
-				$html .= empty( $device_image_url ) ? '' : '<img src="' . esc_url( $device_image_url ) . '" width="150"/><br><br>';
+				$html .= '<img class="image_url_img_preview" src="' . esc_url( $device_image_url ) . '" width="150"/>';
 				$html .= '<input type="text" class="tax_image_upload advanced-category-and-custom-taxonomy-image-url" id="tax_image_url_' . esc_attr( $enabled_device ) . '" name="tax_image_url[tax_image_url_' . esc_attr( $enabled_device ) . ']" value="' . esc_url( $device_image_url ) . '"/>';
 				$html .= '<input type="button" class="button advanced-category-and-custom-taxonomy-image-upload-btn" value="' . esc_attr( $label ) . '" />';
 				$html .= '<p class="description">' . __( 'Choose Image To Show For ', 'advanced-category-and-custom-taxonomy-image' ) . esc_attr( self::$devices[ $enabled_device ] ) . '</p>';
@@ -486,7 +498,7 @@ class Advanced_Category_And_Custom_Taxonomy_Image_Admin {
 
 			$html  = '<tr class="form-field">';
 			$html .= '<th scope="row" valign="top"><label for="tax_image_url_any">' . __( 'Taxonomy Image For Any Device', 'advanced-category-and-custom-taxonomy-image' ) . '</label></th><td>';
-			$html .= empty( $any_image_url ) ? '' : '<img src="' . esc_url( $any_image_url ) . '" width="150"/><br><br>';
+			$html .= '<img class="image_url_img_preview" src="' . esc_url( $any_image_url ) . '" width="150"/>';
 			$html .= '<input type="text" class="tax_image_upload advanced-category-and-custom-taxonomy-image-url" id="tax_image_url_any" name="tax_image_url[tax_image_url_any]" value="' . esc_url( $any_image_url ) . '"/>';
 			$html .= '<input type="button" class="button advanced-category-and-custom-taxonomy-image-upload-btn" value="' . esc_attr( $label ) . '" />';
 			$html .= '<p class="description">' . __( 'Choose Image To Show For Any Device', 'advanced-category-and-custom-taxonomy-image' ) . '</p></td></tr>';
