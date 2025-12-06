@@ -29,4 +29,11 @@ jQuery( document ).ready( function( $ )
 		// Finally, open the modal
 		file_frame.open();
 	} );
+
+	$( '#submit' ).on( 'click', function ( event )
+	{
+		event.preventDefault();
+
+		$( 'img.image_url_img_preview' ).attr( 'src', '' );
+	} );
 } );

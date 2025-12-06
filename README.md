@@ -84,6 +84,9 @@ If successful, click Activate Plugin to activate it, or Return to Plugin Install
 
 ## Changelog
 
+### 2.0.8
+* Compatibility checkup for latest wp version 6.9
+
 ### 2.0.7
 * Fixed issue: Tax image was not updating for any device type.
 
