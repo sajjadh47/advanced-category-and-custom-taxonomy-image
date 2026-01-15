@@ -84,6 +84,9 @@ If successful, click Activate Plugin to activate it, or Return to Plugin Install
 
 ## Changelog
 
+### 2.0.9
+* Added option to select message type when no image is found
+
 ### 2.0.8
 * Compatibility checkup for latest wp version 6.9
 

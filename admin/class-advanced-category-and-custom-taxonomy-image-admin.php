@@ -8,6 +8,11 @@
  * @author        Sajjad Hossain Sagor <sagorh672@gmail.com>
  */
 
+// If this file is called directly, abort.
+if ( ! defined( 'ABSPATH' ) ) {
+	die;
+}
+
 /**
  * The admin-specific functionality of the plugin.
  *
@@ -204,7 +209,7 @@ class Advanced_Category_And_Custom_Taxonomy_Image_Admin {
 		 * @param     array $settings_sections Default settings sections.
 		 * @return    array $settings_sections Modified settings sections.
 		 */
-		return apply_filters( 'ad_cat_tax_img_settings_sections', $settings_sections );
+		return apply_filters( 'advanced_category_and_custom_taxonomy_image_settings_sections', $settings_sections );
 	}
 
 	/**
@@ -228,7 +233,7 @@ class Advanced_Category_And_Custom_Taxonomy_Image_Admin {
 		 * @since    2.0.0
 		 * @param    array $devices An array of devices.
 		 */
-		self::$devices = apply_filters( 'ad_tax_image_devices', array() );
+		self::$devices = apply_filters( 'advanced_category_and_custom_taxonomy_image_devices', array() );
 
 		$settings_fields = array(
 			'ad_cat_tax_img_basic_settings'    => array(
@@ -248,6 +253,17 @@ class Advanced_Category_And_Custom_Taxonomy_Image_Admin {
 					'type'    => 'multicheck',
 					'options' => self::$devices,
 				),
+				array(
+					'name'    => 'message_type',
+					'label'   => __( 'Image Not Found', 'advanced-category-and-custom-taxonomy-image' ),
+					'desc'    => __( 'When an Image is not found for a particular taxonomy you can either show a message or a placeholder image or nothing.', 'advanced-category-and-custom-taxonomy-image' ),
+					'type'    => 'select',
+					'options' => array(
+						'nothing'     => __( 'Show Nothing', 'advanced-category-and-custom-taxonomy-image' ),
+						'placeholder' => __( 'Show Placeholder Image', 'advanced-category-and-custom-taxonomy-image' ),
+						'message'     => __( 'Show A Message', 'advanced-category-and-custom-taxonomy-image' ),
+					),
+				),
 			),
 		);
 
@@ -261,7 +277,7 @@ class Advanced_Category_And_Custom_Taxonomy_Image_Admin {
 		 * @param     array $settings_fields Default settings fields.
 		 * @return    array $settings_fields Modified settings fields.
 		 */
-		return apply_filters( 'ad_cat_tax_img_settings_fields', $settings_fields );
+		return apply_filters( 'advanced_category_and_custom_taxonomy_image_settings_fields', $settings_fields );
 	}
 
 	/**
@@ -400,7 +416,7 @@ class Advanced_Category_And_Custom_Taxonomy_Image_Admin {
 		 * @since    2.0.0
 		 * @param    array $devices An array of devices.
 		 */
-		self::$devices = apply_filters( 'ad_tax_image_devices', array() );
+		self::$devices = apply_filters( 'advanced_category_and_custom_taxonomy_image_devices', array() );
 		$label         = __( 'Choose File', 'advanced-category-and-custom-taxonomy-image' );
 
 		// get all image field enabled devices.
@@ -461,7 +477,7 @@ class Advanced_Category_And_Custom_Taxonomy_Image_Admin {
 		 * @since    2.0.0
 		 * @param    array $devices An array of devices.
 		 */
-		self::$devices = apply_filters( 'ad_tax_image_devices', array() );
+		self::$devices = apply_filters( 'advanced_category_and_custom_taxonomy_image_devices', array() );
 		$label         = __( 'Choose File', 'advanced-category-and-custom-taxonomy-image' );
 
 		// get all image field enabled devices.
